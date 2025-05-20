@@ -10,17 +10,20 @@
     "start": "next start",
     "lint": "next lint",
     "extract": "pnpm dlx dotenv-cli -e .env -e .env.local -- pnpm dlx sanity@latest schema extract --path=./src/sanity/extract.json",
-    "typegen": "pnpm dlx dotenv-cli -e .env -e .env.local -- pnpm dlx sanity@latest typegen generate --schema=./src/sanity/extract.json"
+    "typegen": "pnpm dlx dotenv-cli -e .env -e .env.local -- pnpm dlx sanity@latest typegen generate --schema=./src/sanity/extract.json",
+    "studio": "dotenv -e sanity.env -- sanity dev"
   },
   "dependencies": {
     "@sanity/image-url": "^1.1.0",
-    "@sanity/vision": "^3.88.3",
+    "@sanity/vision": "^3.89.0",
+    "@types/dotenv": "^6.1.1",
     "lucide-react": "^0.510.0",
     "next": "15.3.2",
     "next-sanity": "^9.11.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sanity": "^3.88.3"
+    "sanity": "^3.89.0",
+    "styled-components": "^6.1.18"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -29,8 +32,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "dotenv": "^16.5.0",
+    "dotenv-cli": "^8.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
+    "postcss": "^8.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
